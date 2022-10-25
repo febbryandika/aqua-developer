@@ -1,5 +1,7 @@
 # Aqua-Developer Day 2
 
+Pertemuan hari ke-2 eFishery Academy: Aqua Developer membahas tentang Version Control. Berikut adalah hasil latihan mengenai git.
+
 ### git-init
 ![](https://github.com/febbryandika/aqua-developer/blob/master/Day_2/Version_Control/Image/git-init.jpg)
 
