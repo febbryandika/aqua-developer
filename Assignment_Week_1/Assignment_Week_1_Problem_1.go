@@ -71,7 +71,7 @@ func main() {
 		{"Probiotik B", 10000},
 	}
 
-	var uang int32 = 120000
+	var uang int32 = 100000
 	var total int32
 	var index = 0
 
