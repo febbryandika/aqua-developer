@@ -35,8 +35,6 @@ func (list ListProduct) produkTermahal() (string, int32) {
 		if produk.harga > count {
 			count = produk.harga
 			name = produk.nama
-		} else {
-			continue
 		}
 	}
 	return name, count
@@ -47,8 +45,6 @@ func (list ListProduct) sepuluhRibu() {
 	for _, produk := range list {
 		if produk.harga == 10000 {
 			fmt.Printf("%s - Rp %d\n", produk.nama, produk.harga)
-		} else {
-			continue
 		}
 	}
 }
