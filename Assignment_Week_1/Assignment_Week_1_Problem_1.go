@@ -46,7 +46,7 @@ func (list ListProduct) produkTermahal() (string, int32) {
 func (list ListProduct) sepuluhRibu() {
 	for _, produk := range list {
 		if produk.harga == 10000 {
-			fmt.Printf("%s - %d\n", produk.nama, produk.harga)
+			fmt.Printf("%s - Rp %d\n", produk.nama, produk.harga)
 		} else {
 			continue
 		}
@@ -71,7 +71,7 @@ func main() {
 		{"Probiotik B", 10000},
 	}
 
-	var uang int32 = 100000
+	var uang int32 = 120000
 	var total int32
 	var index = 0
 
@@ -84,8 +84,8 @@ func main() {
 		return sortedList[i].harga < sortedList[j].harga
 	})
 	for i, produk := range sortedList {
-		uang -= produk.harga
-		if uang >= 0 {
+		if uang-produk.harga >= 0 {
+			uang -= produk.harga
 			total += produk.harga
 		} else {
 			index = i
@@ -93,11 +93,12 @@ func main() {
 		}
 	}
 	fmt.Println("Total produk dengan harga dibawah  Rp 100.000:")
-	fmt.Printf("Harga total: %d\n", total)
+	fmt.Printf("Harga total: Rp %d\n", total)
+	fmt.Printf("Sisa uang: Rp %d\n", uang)
 	fmt.Printf("Jumlah barang yang dibeli: %d\n", index)
 	fmt.Println("Produk yang dibeli: ")
 	for i := 0; i < index; i++ {
-		fmt.Printf("%s - %d\n", sortedList[i].nama, sortedList[i].harga)
+		fmt.Printf("%s - Rp %d\n", sortedList[i].nama, sortedList[i].harga)
 	}
 
 	separator()
@@ -110,7 +111,7 @@ func main() {
 
 	// Jawaban poin 1.b
 	namaProdukTermurah, hargaProdukTermurah := ListProduct.produkTermurah(list)
-	fmt.Printf("Daftar produk termurah: %s Rp %d\n", namaProdukTermurah, hargaProdukTermurah)
+	fmt.Printf("Daftar produk termurah: %s - Rp %d\n", namaProdukTermurah, hargaProdukTermurah)
 	namaProdukTermahal, hargaProdukTermahal := ListProduct.produkTermahal(list)
-	fmt.Printf("Daftar produk termahal: %s Rp %d\n", namaProdukTermahal, hargaProdukTermahal)
+	fmt.Printf("Daftar produk termahal: %s - Rp %d\n", namaProdukTermahal, hargaProdukTermahal)
 }
