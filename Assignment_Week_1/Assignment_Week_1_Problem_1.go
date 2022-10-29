@@ -20,8 +20,6 @@ func (list ListProduct) produkTermurah() (string, int32) {
 		if produk.harga < count {
 			count = produk.harga
 			name = produk.nama
-		} else {
-			continue
 		}
 	}
 	return name, count
