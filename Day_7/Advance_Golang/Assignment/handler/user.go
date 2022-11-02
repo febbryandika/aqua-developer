@@ -78,7 +78,7 @@ func (h UserHandler) UpdateUser(ctx *fiber.Ctx) error {
 	if err := h.userUseCase.UpdateUser(userRequest, userId); err != nil {
 		return ctx.Status(fiber.StatusBadRequest).JSON(response.BaseResponse{
 			Code:    fiber.StatusBadRequest,
-			Message: "Invalid request body",
+			Message: "Invalid request",
 			Data:    nil,
 		})
 	}
@@ -92,11 +92,10 @@ func (h UserHandler) UpdateUser(ctx *fiber.Ctx) error {
 func (h UserHandler) DeleteUser(ctx *fiber.Ctx) error {
 	id := ctx.Params("id")
 	userId, _ := strconv.ParseInt(id, 0, 64)
-	userRequest := response.DeleteUserResponse{}
-	if err := h.userUseCase.DeleteUser(userRequest, userId); err != nil {
+	if err := h.userUseCase.DeleteUser(userId); err != nil {
 		return ctx.Status(fiber.StatusBadRequest).JSON(response.BaseResponse{
 			Code:    fiber.StatusBadRequest,
-			Message: "Invalid ID",
+			Message: "Invalid request",
 			Data:    nil,
 		})
 	}

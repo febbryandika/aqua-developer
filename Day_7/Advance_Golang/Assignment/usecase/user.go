@@ -12,7 +12,7 @@ type IUseCase interface {
 	CreateUser(user response.CreateUserRequest) error
 	GetListUser() ([]response.GetUserResponse, error)
 	UpdateUser(user response.UpdateUserResponse) error
-	DeleteUser(user response.DeleteUserResponse) error
+	DeleteUser(id int64) error
 }
 
 type UserUseCase struct {
@@ -46,19 +46,24 @@ func (u UserUseCase) GetListUser() ([]response.GetUserResponse, error) {
 }
 
 func (u UserUseCase) UpdateUser(req response.UpdateUserResponse, id int64) error {
+	if err := u.userRepository.GetById(id); err != nil {
+		return err
+	}
+
 	user := entity.User{ID: id}
 	copier.Copy(&user, &req)
 
-	if err := u.userRepository.Update(user); err != nil {
+	if err := u.userRepository.Update(user, id); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (u UserUseCase) DeleteUser(req response.DeleteUserResponse, id int64) error {
-	user := entity.User{ID: id}
-
-	if err := u.userRepository.Delete(user, id); err != nil {
+func (u UserUseCase) DeleteUser(id int64) error {
+	if err := u.userRepository.GetById(id); err != nil {
+		return err
+	}
+	if err := u.userRepository.Delete(id); err != nil {
 		return err
 	}
 	return nil
