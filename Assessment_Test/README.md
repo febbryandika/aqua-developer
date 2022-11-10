@@ -16,16 +16,13 @@ Dalam model bisnis B2C, pengguna aplikasi dapat dibagi menjadi tiga kategori. Be
 
 Pengguna akan masuk kategori public apabila ketika mengakses aplikasi, pengguna tersebut tidak melalui proses login terlebih dahulu. Pengguna kategori public tetap bisa mengakses aplikasi namun fitur yang tersedia dibatasi. Pengguna kategori public hanya bisa melihat produk apa yang disediakan seperti list produk, detail dari produk, dan melakukan filter dalam list produk.
 
-
 2.	User
 
 Pengguna akan masuk kategori user apabila ketika mengakses aplikasi, pengguna tersebut melakukan proses login terlebih dahulu dan teridentifikasi sebagai user. Pengguna kategori user dapat menikmati fitur seperti pegguna kategori public. Pengguna kategori user pun dapat menikmati fitur seperti memasukan produk yang diinginkan ke dalam cart atau keranjang belanja, melihat cart dan melakukan checkout atau pembelian produk.
 
-
 3.	Admin
 
 Pengguna akan masuk kategori admin apabila ketika mengakses aplikasi, pengguna tersebut melakukan proses login terlebih dahulu dan teridentifikasi sebagai admin. Pengguna kategori admin dapat menikmati fitur seperti user namun pengguna kategori admin tidak dapat memasukan produk ke cart dan tidak dapat melakukan checkout. Pengguna dengan kategori admin dapat memasukan produk baru ke list produk dan mengubah data produk.
-
 
 ### How to Run
 Untuk dapat menggunakan aplikasi ini, lakukan clone pada repository ini.
