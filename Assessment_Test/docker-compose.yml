@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  # Database
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=PSQL_USER
+      - POSTGRES_PASSWORD=PSQL_PASSWORD
+      - POSTGRES_DB=PSQL_DB
+    networks:
+      - e-commerce_network
+  # E-Commerce
+  e-commerce:
+    depends_on:
+      - db
+    image: febbryandika/e-commerce:v4
+    ports:
+      - "1323:1323"
+    environment:
+      - DB_HOST=PSQL_HOST
+      - DB_USER=PSQL_USER
+      - DB_PASSWORD=PSQL_PASSWORD
+      - DB_NAME=PSQL_DB
+      - DB_PORT=PSQL_PORT
+    networks:
+      - e-commerce_network
+networks:
+  e-commerce_network:
