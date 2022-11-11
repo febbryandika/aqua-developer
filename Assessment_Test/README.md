@@ -36,4 +36,4 @@ Kemudian jalankan docker compose.
 `docker-compose up`
 
 ### Cara Penggunaan
-Cara penggunaan aplikasi dapat dilihat di dokumentasi API berikut ([ini](https://documenter.getpostman.com/view/20138613/2s8YeoQDp6)).
+Cara penggunaan aplikasi dapat dilihat di dokumentasi API berikut [ini](https://documenter.getpostman.com/view/20138613/2s8YeoQDp6).
