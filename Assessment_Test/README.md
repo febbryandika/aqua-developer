@@ -32,4 +32,4 @@ Setelah melakukan clone, ubah lah informasi pada docker-compose.yml. Informasi y
 Kemudian jalankan docker compose.
 
 ### Cara Penggunaan
-Cara penggunaan aplikasi dapat dilihat di dokumentasi API berikut ini.
+Cara penggunaan aplikasi dapat dilihat di dokumentasi API berikut [ini]([https://duckduckgo.com](https://documenter.getpostman.com/view/20138613/2s8YeoQDp6)).
