@@ -10,7 +10,7 @@ type ICheckoutRepository interface {
 	CreateCheckout(id int64) (entity.Checkout, error)
 	GetCart() ([]entity.Cart, error)
 	ProductCheckout(checkout []entity.CheckoutProduct) error
-	ClearCart() error
+	ClearCart(id int64) error
 }
 
 type CheckoutRepository struct {
@@ -44,8 +44,8 @@ func (c CheckoutRepository) ProductCheckout(checkout []entity.CheckoutProduct) e
 	return nil
 }
 
-func (c CheckoutRepository) ClearCart() error {
-	if err := c.db.Where("1 = 1").Delete(&entity.Cart{}).Error; err != nil {
+func (c CheckoutRepository) ClearCart(id int64) error {
+	if err := c.db.Where("user_id = ?", id).Delete(&entity.Cart{}).Error; err != nil {
 		return err
 	}
 	return nil
