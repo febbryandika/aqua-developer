@@ -46,7 +46,7 @@ func (c CheckoutUseCase) CheckoutCart(id int64) error {
 		return err
 	}
 
-	if err := c.checkoutRepository.ClearCart(); err != nil {
+	if err := c.checkoutRepository.ClearCart(id); err != nil {
 		return err
 	}
 	return nil
