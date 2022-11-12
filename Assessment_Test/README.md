@@ -7,6 +7,9 @@ Aplikasi E-Commerce ini memliki fitur:
 4.	Cart
 5.	Checkout produk
 
+### Entity Relationship Diagram
+ERD untuk aplikasi E-Commerce dapat dilihat [disini](https://dbdiagram.io/d/636be431c9abfc6111717488).
+
 ### Problem & Motivation
 E-Commerce merupakan teknologi dalam bentuk aplikasi yang menghubungkan bisnis, consumer dan masyarakat dalam pertukaran barang, jasa dan informasi secara elektronik. Pada aplikasi yang dikembangkan ini, jenis e-commerce yang diterapkan yaitu B2C atau business to consumer dimana model penjualan dari bisnis langsung ke penjualan.
 
