@@ -30,13 +30,17 @@ Pengguna akan masuk kategori admin apabila ketika mengakses aplikasi, pengguna t
 ### How to Run
 Untuk dapat menggunakan aplikasi ini, lakukan clone pada repository ini.
 
-`git clone https://github.com/febbryandika/aqua-developer.git`
+```
+git clone https://github.com/febbryandika/aqua-developer.git
+```
 
 Setelah melakukan clone, ubah lah informasi pada docker-compose.yml. Informasi yang diperlukan yaitu database host, database user, database password, database name, dan database port.
 
 Kemudian jalankan docker compose.
 
-`docker-compose up`
+```
+docker-compose up
+```
 
 ### Cara Penggunaan
 Cara penggunaan aplikasi dapat dilihat di dokumentasi API berikut [ini](https://documenter.getpostman.com/view/20138613/2s8YeoQDp6).
